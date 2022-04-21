@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 const Header = () => {
   return (
     <header>
-      <Navbar bg="dark" variant="dark">
+      <Navbar fixed="top" bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="/">Shop Shop</Navbar.Brand>
           <Nav className="me-auto">

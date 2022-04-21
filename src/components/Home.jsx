@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <main>
       <div className="hero">
-        <div className="text-container">
+        <div className="hero-text">
           <h1>Why have few things when you could have more things?</h1>
         </div>
       </div>

@@ -1,0 +1,28 @@
+.text-container {
+    width: 100%;
+    padding: 5em 10em 5em 10em;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    flex-direction: column;
+    color: darkslategray;
+}
+
+h3 {
+    margin-bottom: 1em;
+}
+
+img {
+    margin-top: 2em;
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 10%;
+}
