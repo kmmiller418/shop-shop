@@ -1,0 +1,29 @@
+.hero {
+    width: 100%;
+    height: 50vh;
+    background-image: url(https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm00MjQtcm0zNTUtY2EyMS1tb2NrdXAuanBn.jpg?s=bODEbODODWG0ovhgr0C9q4o1YQ0xCkcnUs6x9YX6f9o);
+    background-repeat: no-repeat;
+    background-color: darkslategray;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.text-container {
+    display: flex;
+    color: azure;
+    width: 50%;
+    align-items: center;
+    text-align: center;
+    padding: 2em;
+}
+
+h1 {
+    text-shadow: 2px 2px rgb(90,72,62);
+    font-style: italic;
+}
+
+.cards {
+    padding: 5em;
+    width: 100%;
+    margin-bottom: 2em;
+}
