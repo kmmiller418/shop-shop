@@ -11,7 +11,7 @@ const Header = () => {
           <Nav className="justify-content-end">
             <Nav.Link href="/products">Products</Nav.Link>
             <Nav.Link href="/about">About/Contact Us</Nav.Link>
-            <Nav.Link href="/cart">Cart</Nav.Link>
+            <Nav.Link href="/cart">Cart ({JSON.parse(localStorage.getItem("cartItems")).length})</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

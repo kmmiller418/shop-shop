@@ -27,7 +27,7 @@ const prodList = [
     id: 4,
     name: "Swirling void",
     desc: "Something like the darkness that hides behind your eyes or the weight that seems to hover just beyond your shoulders. This purchase will make it more or less substantial. Whichever you do or don't fancy.",
-    price: "you have already paid the price",
+    price: "? you have already paid the price",
     category: "Intangible",
     img: "https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjg4Mi1hZXctNTEtYV8xLmpwZw.jpg?s=H4rE7Wi5YSymqtbsP-rk2yjsNOSHn7wMIbdTf5Q8Eew",
   },
@@ -106,6 +106,10 @@ export const categories = [
 
 export function getProdList() {
   return prodList;
+}
+
+export function getProduct(id){
+  return prodList.find((product) => product.id === Number(id));
 }
 
 export function filterProducts(category) {
