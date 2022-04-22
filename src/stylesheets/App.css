@@ -1,5 +1,23 @@
 .products {
-margin: 5em 10em;
+  margin: 5em 10em;
+}
+
+.product-filters {
+  list-style-type: none;
+}
+
+.product-filters li {
+  margin-bottom: 2em;
+  font-size: 1.5em;
+  color: darkslategray;
+}
+
+.product-filters a {
+  text-decoration: none;
+}
+
+.product-filters a:hover {
+  background-color: paleturquoise;
 }
 
 .cardBlock {
@@ -22,21 +40,37 @@ margin: 5em 10em;
   width: 45%;
   margin: auto;
   margin-top: 5em;
-  margin-bottom: 10em;
+  margin-bottom: 5em;
 }
 
-.cart-buttons { }
+.cart-buttons {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-bottom: 5em;
+}
+
+.cart-buttons Button {
+  margin-left: 0.5em;
+}
 
 .cart-info {
   display: flex;
   justify-content: space-around;
 }
 
+.empty-cart {
+  border: 1px solid green;
+  padding: 2em;
+  margin-top: 2em;
+  color: darkslategrey;
+}
+
 .cartItem {
   width: 80%;
   margin: auto;
-  height: 10em;
-  margin-bottom: 5em;
+  height: 11em;
+  margin-bottom: 3em;
 }
 
 .cardTitle {
@@ -44,9 +78,8 @@ margin: 5em 10em;
   justify-content: space-between;
 }
 
-
-.cartItem:hover{
-  height:100%;
+.cartItem:hover {
+  height: 100%;
 }
 
 Footer {

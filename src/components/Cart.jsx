@@ -13,7 +13,10 @@ const removeFromCart = (e) => {
 
 const clearCart = () => {
   let cartItems = JSON.parse(localStorage.getItem("cartItems"));
-  alert("Are you sure about this?");
+  let removeTrue = window.confirm("Are you sure about this?");
+  if (!removeTrue) {
+    return;
+  }
   cartItems = [];
   localStorage.setItem("cartItems", JSON.stringify(cartItems));
   window.location.reload();
@@ -30,7 +33,7 @@ const CartItem = (props) => {
     <div className="cartItem">
       <Card key={props.index}>
         <Card.Img variant="top" src={img} />
-        <Card.Body className="cardBlock">
+        <Card.Body className="cartBlock">
           <Card.Title className="cardTitle">
             {name} ${price}{" "}
             <Button
@@ -56,7 +59,7 @@ export default function Cart() {
 
   let subTotal = 0;
   for (let i = 0; i < totalItems; i++) {
-    if (products[i].id === 4) continue;
+    if (products[i].name === "Swirling void"){continue};
     subTotal += products[i].price;
   }
 
@@ -64,7 +67,7 @@ export default function Cart() {
     <div>
       <Header />
       <div className="cart">
-      <div className="cart-buttons">
+        <div className="cart-buttons">
           <Button variant="outline-primary" onClick={clearCart}>
             Clear Cart
           </Button>
@@ -77,9 +80,12 @@ export default function Cart() {
           <h4>{`Total Items: ${totalItems}`}</h4>
           <h4>{`Subtotal: $${subTotal.toFixed(2)}`}</h4>
         </div>
+        {!products.length && (
+          <h3 className='empty-cart'>There's nothing here... maybe we should fix that!</h3>
+        )}
         <Row xs={1} md={1} className="g-4">
           {products.map((item, index) => (
-            <Col key={index}>
+            <Col className="shoppingCart-col" key={index}>
               <CartItem item={item} index={index} />
             </Col>
           ))}

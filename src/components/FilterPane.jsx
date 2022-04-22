@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { categories } from "./data";
 import { Button, Offcanvas } from "react-bootstrap";
+import "../stylesheets/App.css";
 
 export default function FilterPane() {
   const [show, setShow] = useState(false);
@@ -20,12 +21,15 @@ export default function FilterPane() {
           <Offcanvas.Title>Product Filters</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <ul>
+          <ul className="product-filters">
             {categories.map((category) => (
               <li key={category}>
                 <CategoryLink category={category}>{category}</CategoryLink>
               </li>
             ))}
+            <li>
+              <Link to="/products">All</Link>
+            </li>
           </ul>
         </Offcanvas.Body>
       </Offcanvas>
@@ -43,7 +47,7 @@ function CategoryLink({ category, children, ...props }) {
       {...props}
       style={{
         ...props.style,
-        color: isActive ? "red" : "black",
+        color: isActive ? "green" : "black",
       }}
     >
       {children}
