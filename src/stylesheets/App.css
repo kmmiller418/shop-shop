@@ -1,3 +1,18 @@
+.products {
+margin: 5em 10em;
+}
+
+.cardBlock {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  justify-content: space-between;
+}
+
+.products Button {
+  margin-bottom: 2em;
+}
+
 Footer {
   margin-top: 10%;
   position: fixed;

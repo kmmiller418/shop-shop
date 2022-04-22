@@ -8,7 +8,7 @@ const Header = () => {
       <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="/">Shop Shop</Navbar.Brand>
-          <Nav className="me-auto">
+          <Nav className="justify-content-end">
             <Nav.Link href="/products">Products</Nav.Link>
             <Nav.Link href="/about">About/Contact Us</Nav.Link>
             <Nav.Link href="/cart">Cart</Nav.Link>
