@@ -9,11 +9,11 @@ const Header = () => {
     <header>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="/">Shop Shop</Navbar.Brand>
+          <Navbar.Brand href="/shop-shop">Shop Shop</Navbar.Brand>
           <Nav className="justify-content-end">
-            <Nav.Link href="/products">Products</Nav.Link>
-            <Nav.Link href="/about">About/Contact Us</Nav.Link>
-            <Nav.Link href="/cart">Cart ({cartItems.length})</Nav.Link>
+            <Nav.Link href="/shop-shop/#/products">Products</Nav.Link>
+            <Nav.Link href="/shop-shop/#/about">About/Contact Us</Nav.Link>
+            <Nav.Link href="/shop-shop/#/cart">Cart ({cartItems.length})</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
