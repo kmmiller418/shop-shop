@@ -43,7 +43,7 @@ function CategoryLink({ category, children, ...props }) {
 
   return (
     <Link
-      to={`products/?category=${category}`}
+      to={`/?category=${category}`}
       {...props}
       style={{
         ...props.style,
