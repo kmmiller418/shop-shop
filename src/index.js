@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import "./stylesheets/index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import App from "./components/App";
@@ -11,7 +11,7 @@ import Cart from "./components/Cart";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<App/>}/>
         <Route path="products" element={<Products/>}/>
@@ -19,6 +19,6 @@ root.render(
         <Route path="products" element={<Products/>}>        </Route>
         <Route path="cart" element={<Cart/>}/>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
