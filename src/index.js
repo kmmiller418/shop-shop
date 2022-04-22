@@ -11,7 +11,7 @@ import Cart from "./components/Cart";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/shop-shop">
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<App/>}/>
         <Route path="products" element={<Products/>}/>
