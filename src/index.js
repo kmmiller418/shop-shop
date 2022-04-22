@@ -14,10 +14,9 @@ root.render(
     <HashRouter>
       <Routes>
         <Route path="/" element={<App/>}/>
-        <Route path="products" element={<Products/>}/>
-        <Route path="about" element={<About/>}/>
-        <Route path="products" element={<Products/>}>        </Route>
-        <Route path="cart" element={<Cart/>}/>
+        <Route path="/products" element={<Products/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/cart" element={<Cart/>}/>
       </Routes>
     </HashRouter>
   </React.StrictMode>
