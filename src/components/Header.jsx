@@ -3,6 +3,8 @@ import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 
 const Header = () => {
+  let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
   return (
     <header>
       <Navbar bg="dark" variant="dark">
@@ -11,7 +13,7 @@ const Header = () => {
           <Nav className="justify-content-end">
             <Nav.Link href="/products">Products</Nav.Link>
             <Nav.Link href="/about">About/Contact Us</Nav.Link>
-            <Nav.Link href="/cart">Cart ({JSON.parse(localStorage.getItem("cartItems")).length})</Nav.Link>
+            <Nav.Link href="/cart">Cart ({cartItems.length})</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
